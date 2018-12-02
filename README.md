@@ -6,22 +6,25 @@
 ## Building
 
 ```
+
 $ cd cmd
-$ go build des、res加密.go
+$ go build -o crypto.exe des、res加密.go
 ```
 
 
 ## Usage
 
-1、go build des、res加密.go生成 des、res加密.exe可执行文件后
+1、go build -o crypto.exe des、res加密.go生成 crypto.exe可执行文件后
 
-2、双击运行des、res加密.exe，根据提示选择加解密模式
+2、双击运行 crypto.exe，根据提示选择加解密模式
 
 3、把需要加解密的文件（只能是单个文件）直接拖到窗口中，按enter键结束
 
 4、加解密后的文件默认保存在的当前文件夹的加密、解密文件夹中
 
 5、加密后的文件根据加密模式的不同在文件名追加不同前缀加以区分
+
+6、Windows下，目录名和文件名支持空格和中文。
 
 ## Problem
 
@@ -32,3 +35,5 @@ $ go build des、res加密.go
 3、一次只能加解密单个的文件，不支持文件夹加解密
 
 4、对于文件名的处理不够周全
+
+5、Linux下生成可执行文件并运行后，将加解密的文件直接拖进终端获取路径后，需删除路径的单引号，以后再优化。
